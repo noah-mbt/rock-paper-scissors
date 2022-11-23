@@ -15,6 +15,10 @@ function getComputerChoice() {
     }
 };
 
+// write a function that plays a single round of rock paper scissors
+// the function should take two parameters: playerSelection and computerSelection
+// then return a string that declares the winner of the round 
+
 function playround(playerSelection, computerSelection) {
 
     if (playerSelection == "rock" && computerSelection == "paper") { // rock vs paper
@@ -38,7 +42,7 @@ function playround(playerSelection, computerSelection) {
     }
 
 
-    else { // rock vs rock & paper vs paper & scissors vs scissors
+    else { // rock vs rock / paper vs paper / scissors vs scissors
         return "Tie game !" 
     }
 }
@@ -48,12 +52,10 @@ const computerSelection = getComputerChoice();
 console.log(playround(playerSelection, computerSelection));
 
 
-// you want to return the results of this function call. You’re going to use what you return later on
 
-// write a NEW function called game(). 
-// call the playRound function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
-// function game() {
-//     for (let i = 0; i < 5; i++) {
-//         playround();
-//     }
-// }
+function game() {
+    playround();
+    for (let i = 0; i < 5; i++) {
+        console.log()
+    }
+}

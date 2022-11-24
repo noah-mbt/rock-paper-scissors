@@ -20,6 +20,8 @@ function getComputerChoice() {
 // then return a string that declares the winner of the round 
 
 function playround(playerSelection, computerSelection) {
+    
+    console.log(computerSelection);
 
     if (playerSelection == "rock" && computerSelection == "paper") { // rock vs paper
         return "Paper beats rock, I win"
@@ -54,8 +56,7 @@ console.log(playround(playerSelection, computerSelection));
 
 
 function game() {
-    playround();
-    for (let i = 0; i < 5; i++) {
-        console.log()
+    for (let i = 1; i < 5; i++) {
+        playround();
     }
 }

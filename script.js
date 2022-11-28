@@ -66,6 +66,6 @@ function game() {
         const computerSelection = getComputerChoice();
         console.log(playround(playerSelection, computerSelection));
         console.log("Your score is " + userScore);
-        console.log("Computer's score is " + computerScore);
+        console.log("My score is " + computerScore);
     }
 }

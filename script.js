@@ -61,11 +61,11 @@ let userScore = parseInt(0);
 let computerScore = parseInt(0);
 
 function game() {
-    for (let i = 0; i < 5; i++) {
+    while (computerScore < 5 && userScore < 5) {
         const playerSelection = prompt("Please select \"Rock\", \"Paper\" or \"Scissors\"").toLowerCase();
         const computerSelection = getComputerChoice();
         console.log(playround(playerSelection, computerSelection));
-        console.log("Your score is " + userScore);
+        console.log("Player score is " + userScore);
         console.log("My score is " + computerScore);
     }
 }

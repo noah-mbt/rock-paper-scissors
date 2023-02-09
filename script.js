@@ -51,7 +51,7 @@ function playround(playerSelection, computerSelection) {
 
 
     else { // rock vs rock / paper vs paper / scissors vs scissors
-        return "Tie game !";
+        return "It's a tie game ! You both chose " + playerSelection;
     }
 }
 
@@ -69,3 +69,7 @@ function game() {
         console.log("My score is " + computerScore);
     }
 }
+
+const rock = document.querySelector("#rock-btn")
+const paper = document.querySelector("#paper-btn")
+const scissors = document.querySelector("#scissors-btn")

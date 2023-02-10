@@ -4,6 +4,9 @@
 
 const choices = ["rock", "paper", "scissors"]; // declare the choices to be usec
 
+let playerScore = parseInt(0);
+let computerScore = parseInt(0);
+
 const rock = document.getElementById("rock-btn");
 rock.addEventListener("click", () => {
     playround(choices[0]); 
@@ -48,7 +51,8 @@ function playround(playerSelection) {
         playerSelection == choices[2] && computerSelection == choices[0] // scissors vs rock
     ) { 
         document.getElementById("scoreboard").innerText = `${computerSelection} beats ${playerSelection}, I win !`;
-        document.getElementById("cs").innerText=Number(document.getElementById("cs").innerText)+1
+        computerScore++;
+        document.getElementById("cs").innerText = computerScore;
     } 
     
     else if(computerSelection === playerSelection) {
@@ -57,13 +61,11 @@ function playround(playerSelection) {
 
     else {
         document.getElementById("scoreboard").textContent = `GG's, ${playerSelection} beats ${computerSelection}... I lost`;
-        document.getElementById("ps").innerText=Number(document.getElementById("cs").innerText)+1;
+        playerScore++;
+        document.getElementById("ps").textContent = playerScore;
     }
 }
 
-
-// let userScore = parseInt(0);
-// let computerScore = parseInt(0);
 
 
 

@@ -1,4 +1,14 @@
 #all {
     display: block;
     text-align: center;
+}
+
+span {
+    padding: 5px; 
 } 
+
+.button {
+    margin: 10px;
+    
+}
+

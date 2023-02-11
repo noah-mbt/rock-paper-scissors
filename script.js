@@ -2,10 +2,19 @@
 
 // write a function called getComputerChoice that will randomly return either ‘"Rock", "Paper’"or "Scissors"
 
-const choices = ["rock", "paper", "scissors"]; // declare the choices to be usec
+const choices = ["rock", "paper", "scissors"]; // declare the choices to be used
 
-let playerScore = parseInt(0);
-let computerScore = parseInt(0);
+let playerScore = Number(0); // create a player score tracker
+let computerScore = Number(0); // create a computer score tracker 
+
+// add nodes to variables to be used to edit the scores and log the score message
+
+let scoreboard = document.getElementById("scoreboard")
+let ps = document.getElementById("ps")
+let cs = document.getElementById("cs")
+
+//add nodes (and buttons) to variables
+//add event listeners that call the gameplaying function 
 
 const rock = document.getElementById("rock-btn");
 rock.addEventListener("click", () => {
@@ -27,18 +36,9 @@ function getComputerSelection() {
     return (choices[i]);
 };
 
-// function game() {
-//     while (computerScore < 5 && userScore < 5) {
-//         const playerSelection = prompt("Please select \"Rock\", \"Paper\" or \"Scissors\"").toLowerCase();
-//         const computerSelection = getComputerChoice();
-//         console.log(playround(playerSelection, computerSelection));
-//         console.log("Player score is " + userScore);
-//         console.log("My score is " + computerScore);
-//     }
-// }
 
-// write a function that plays a single round of rock paper scissors
-// the function should take two parameters: playerSelection and computerSelection
+// write a function that plays rounds of rock paper scissors
+// the function should take as many parameters as necessary (in my case: playerSelection)
 // then return a string that declares the winner of the round 
 
 function playround(playerSelection) {
@@ -50,19 +50,19 @@ function playround(playerSelection) {
         playerSelection == choices[1] && computerSelection == choices[2] || // paper vs scissors
         playerSelection == choices[2] && computerSelection == choices[0] // scissors vs rock
     ) { 
-        document.getElementById("scoreboard").innerText = `${computerSelection} beats ${playerSelection}, I win !`;
+        scoreboard.innerText = `${computerSelection} beats ${playerSelection}, I win !`;
         computerScore++;
-        document.getElementById("cs").innerText = computerScore;
+        cs.innerText = computerScore;
     } 
     
-    else if(computerSelection === playerSelection) {
-        document.getElementById("scoreboard").textContent = `That's crazy, it's a tie game ! We both picked ${playerSelection}`;
+    else if (computerSelection === playerSelection) {
+        scoreboard.innerText = `That's crazy, it's a tie game ! We both picked ${playerSelection}`;
     }
 
     else {
-        document.getElementById("scoreboard").textContent = `GG's, ${playerSelection} beats ${computerSelection}... I lost`;
+        scoreboard.innerText = `GG's, ${playerSelection} beats ${computerSelection}... I lost`;
         playerScore++;
-        document.getElementById("ps").textContent = playerScore;
+        ps.innerText = playerScore;
     }
 }
 

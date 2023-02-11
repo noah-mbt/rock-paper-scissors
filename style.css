@@ -3,9 +3,22 @@
     text-align: center;
 }
 
+section {
+    background-color: #C38370;
+}
+
+#header-text {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 48px;
+
+}
+
 span {
     padding: 5px; 
 } 
+
+
 
 .button {
     margin: 10px;

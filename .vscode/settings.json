@@ -171,5 +171,6 @@
       ]
   },
     "editor.fontLigatures": false,
-    "workbench.colorTheme": "Night Owl"
+    "workbench.colorTheme": "Night Owl",
+    "liveServer.settings.port": 5501
 }

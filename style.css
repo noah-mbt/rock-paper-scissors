@@ -1,14 +1,25 @@
-#all {
-    display: block;
+* {
+  margin: 0; 
+  padding: 0;
+  }
+
+body {
+    background-color: #192841;
+    color: #f7f7f7;
+}
+
+#omni {
+display: block;
     text-align: center;
 }
 
-section {
-    background-color: #C38370;
+#header {
+    width: 100%;
+    background-color: #23395d;
+    padding: 20px 0 20px 0;
 }
 
 #header-text {
-    padding-top: 20px;
     padding-bottom: 20px;
     font-size: 48px;
 
@@ -16,12 +27,17 @@ section {
 
 span {
     padding: 5px; 
-} 
+}
 
-
+#computer-score {
+    margin-bottom: 20px;
+}
 
 .button {
-    margin: 10px;
-    
+    padding: 2px 8px 2px 8px;
+    background-color: #0275d8;
+    color: #f7f7f7;
+    border-radius: 6px;
+    border: 0;
 }
 

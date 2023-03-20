@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock, Paper, Scissors !</title>
+    <title>Rock, Paper, Scissors</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -16,31 +16,33 @@
         </div>
 
         <div class="container" id="main">
-            <p>Choose your weapon</p>
-            <p>The first to score 5 points wins the game</p>
+            <p id="selection">Choose your weapon</p>
+            <p id="rules">First to score 5 points wins the game</p>
             <p id="scoreboard">Scoreboard</p>
 
             <div id="score-container">
                 <div>
                     <div id="player-score">
-                        <span class="playersTitle playerColor">Player</span>
+                        <span class="playersTitle playerColor">Player:</span>
                         <span id="ps"></span>
                     </div>
                     
                     <div id="computer-score">
-                        <span class="playersTitle computerColor">Computer</span>
+                        <span class="playersTitle computerColor">Computer:</span>
                         <span id="cs"></span>
                     </div>
                 </div>
             </div>
 
-            <div class="buttons" id="options">
+            <div class="container" id="options">
                 <button class="button" id="rock-btn">Rock</button>
                 <button class="button" id="paper-btn">Paper</button>
                 <button class="button" id="scissors-btn">Scissors</button>
             </div>
 
         </div>
+
+        <footer>Copyright © Noah Mbutcho</footer>
     </div>
 </body>
 </html>
